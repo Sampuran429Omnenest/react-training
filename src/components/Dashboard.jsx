@@ -1,20 +1,18 @@
-// import { useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-// import { useNavigate } from "react-router-dom";
-import Portfolio from "./Portfolio";
-function Dashboard({onLogout}){
-    // const [showPortfolio,setShowPortfolio]=useState(false);
-    const student={
-        name:"sam",
-        age:20,
-        course:"react"
+import { products } from '../utils/Product';
+import SortAndFilter from "./sortingandfolder/SortAndFilter";
+function Dashboard({ onLogout }) {
+    const student = {
+        name: "sam",
+        age: 20,
+        course: "react"
     }
-    //const navigate=useNavigate();
-    return(
+
+    return (
         <div>
             <h3>this is the dashboard</h3>
-            <Header/>
+            <Header />
             <div>
                 <p>name is {student.name}</p>
                 <p>age is {student.age}</p>
@@ -23,9 +21,12 @@ function Dashboard({onLogout}){
             <div>
                 <button onClick={onLogout}>click me </button>
             </div>
-            <Footer/>
+            <h2 style={{ marginTop: '30px' }}>Our Products</h2>
+             <SortAndFilter products={products} />
+
+            <Footer />
         </div>
     );
-    
 }
-export default Dashboard
+
+export default Dashboard;
