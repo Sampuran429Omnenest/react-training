@@ -1,5 +1,4 @@
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
-import Portfolio from './components/Portfolio'
 import Dashboard from './components/Dashboard'
 import Auth from './components/Auth'
 import { useState } from 'react'
