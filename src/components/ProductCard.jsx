@@ -1,7 +1,7 @@
 function ProductCard({ product }) {
   // Destructuring the product object
    if (!product) return null;
-  const { name, category, price, rating, inStock } = product;
+  const { name, category, price, rating, inStock, image} = product;
 
   return (
     <div style={{
@@ -16,6 +16,10 @@ function ProductCard({ product }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', color: '#888' }}>
         <span>{category}</span>
         <span>⭐ {rating}</span>
+      </div>
+
+      <div>
+        <img src={image} alt="image not found" />
       </div>
 
       {/* Name & Price */}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 function useSortControls(products){
-    const [sortBy,setSortBy]=useState('default');
+    const [sortBy,setSortBy]=useState('default');   
     const getSortedProducts=()=>{
         const sortedProducts=[...products];
         if(sortBy==='price-low-high'){
